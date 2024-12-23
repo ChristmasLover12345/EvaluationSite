@@ -31,7 +31,6 @@ let FText = document.getElementById('FText');
 
 q1JacobBtn.addEventListener('click', function() {
     jacobFunc()
-
 })
 
 async function jacobFunc()
@@ -40,6 +39,61 @@ async function jacobFunc()
     const data = await promise.json();
     console.log(data);
 
+    JImg.src = data.img_url
+    JTitle.innerText = data.name
+    JText.innerText = data.description
     jacobContainer.classList.add("show")
+
+}
+
+q1IsaiahBtn.addEventListener('click', function() {
+    IsaiahFunc()
+})
+
+async function IsaiahFunc()
+{
+    const promise = await fetch ("https://evaluationmmadlib-asfqhkgke2e5hxf9.westus-01.azurewebsites.net/Isaiah/Isaiah");
+    const data = await promise.json();
+    console.log(data);
+
+    IImg.src = data.img_url
+    ITitle.innerText = data.name
+    IText.innerText = data.description
+    IsaiahContainer.classList.add("show")
+
+}
+
+q1CatBtn.addEventListener('click', function() {
+    CatFunc()
+})
+
+async function CatFunc()
+{
+    const promise = await fetch ("https://evaluationmmadlib-asfqhkgke2e5hxf9.westus-01.azurewebsites.net/Cat/cat");
+    const data = await promise.json();
+    console.log(data);
+    console.log("the CFA Url doesnt exist anymore");
+    // the CFA Url doesnt exist anymore
+    CImg.src = data.cfa_url
+    CTitle.innerText = data.name
+    CText.innerText = data.description
+    CatContainer.classList.add("show")
+
+}
+
+q1FortniteBtn.addEventListener('click', function() {
+    FortFunc()
+})
+
+async function FortFunc()
+{
+    const promise = await fetch ("https://fortnite-api.com/v2/cosmetics/br/Backpack_AbstractMirror");
+    const data = await promise.json();
+    console.log(data);
+
+    FImg.src = data.data.images.icon
+    FTitle.innerText = data.data.name
+    FText.innerText = data.data.description
+    FortniteContainer.classList.add("show")
 
 }
