@@ -1,0 +1,24 @@
+#jacobContainer
+{
+    display: none;
+}
+
+#IsaiahContainer
+{
+    display: none;
+}
+
+#CatContainer
+{
+    display: none;
+}
+
+#FortniteContainer
+{
+    display: none;
+}
+
+.show
+{
+    display: block !important;
+}
